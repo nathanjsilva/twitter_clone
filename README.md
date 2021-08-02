@@ -1,2 +1,2 @@
 # twitter_clone
-Projeto twitter clone utilizando o padrão MVC
+Projeto twitter clone em PHP, CSS, BOOTSTRAP, HTML, JQUERY utilizando o padrão MVC
