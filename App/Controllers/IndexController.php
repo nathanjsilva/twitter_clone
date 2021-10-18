@@ -30,7 +30,7 @@ class IndexController extends Action {
 		$usuario->__set('email',$email);
 		$usuario->__set('senha',$senha);
 
-		$usuario-> inserirUsuario();
+		$usuario->validarCadastro() == true ? $usuario-> inserirUsuario() : "teste";
 	}
 
 }

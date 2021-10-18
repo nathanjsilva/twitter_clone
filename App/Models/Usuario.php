@@ -36,5 +36,15 @@ class Usuario extends Model {
                 return false;
             }
         }
+
+        public function validarCadastro() {
+            $valido = true;
+            
+            if(strlen($this->__get('nome'))  < 3) $valido = false;  
+            if(strlen($this->__get('email')) < 3) $valido = false;  
+            if(strlen($this->__get('senha')) < 3) $valido = false;  
+
+            return $valido;
+        }
     }
 ?>
