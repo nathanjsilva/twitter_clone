@@ -3,7 +3,6 @@
 namespace App\Controllers;
 
 //os recursos do miniframework
-
 use App\Models\Usuario;
 use MF\Controller\Action;
 use MF\Model\Container;
@@ -16,7 +15,16 @@ class IndexController extends Action {
 	}
 
 	public function inscreverse() {
+
+		$this->view->usuario = array (
+			"nome" => '',
+			"email" => '',
+			"senha" => '',
+		);
+
+		$this->view->erroCadastro = false;
 		$this->render('inscreverse');
+		
 	}
 
 	public function registrar() {
@@ -32,6 +40,7 @@ class IndexController extends Action {
 
 		$usuario->validarCadastro() == true ? $usuario-> inserirUsuario() : "teste";
 	}
+
 
 }
 
